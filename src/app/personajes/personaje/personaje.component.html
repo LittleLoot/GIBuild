@@ -1,0 +1,51 @@
+<div class="col-10 col-md-12">
+
+  <a class="btn btn-primary float-md-right" routerLink="/addpers"
+      *ngIf= "isAuth()">Añadir nuevo personaje</a>
+
+  <h3>Listado de personajes</h3>
+
+</div>
+
+<div class="col-10 col-md-12">
+  <table class="table table-bordered table-striped table-hover" style="margin-top: 40px">
+    <!-- <thead>
+      <tr class="filters">
+
+        <th *ngIf= "isAuth()"></th>
+        <th *ngIf= "isAuth()"></th>
+      </tr>
+    </thead> -->
+
+    <tbody>
+      <tr *ngFor="let personaje of personajes" [ngSwitch]="personaje.elemento">
+        <td class="imagenSize">
+          <img src="{{ personaje.imagen }}">
+        </td>
+
+        <td *ngSwitchCase="'pyro'" class="pyro"></td>
+        <td *ngSwitchCase="'anemo'" class="anemo"></td>
+        <td *ngSwitchCase="'cryo'" class="cryo"></td>
+        <td *ngSwitchCase="'electro'" class="electro"></td>
+        <td *ngSwitchCase="'geo'" class="geo"></td>
+        <td *ngSwitchCase="'dendro'" class="dendro"></td>
+        <td *ngSwitchCase="'hydro'" class="hydro"></td>
+
+        <td>{{ personaje.estilo }}</td>
+        <td *ngIf= "isAuth()">
+          <button type="button" class="btn btn-success"
+                  routerLink="/editpers/{{ personaje.id$ }}">
+            Editar
+          </button>
+        </td>
+        <td *ngIf= "isAuth()">
+          <button type="button" class="btn btn-danger"
+                  (click)="eliminarPersonaje(personaje.id$)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

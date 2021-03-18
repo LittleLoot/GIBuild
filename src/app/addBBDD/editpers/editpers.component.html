@@ -1,0 +1,118 @@
+<div class="row">
+  <div class="col col-md">
+    <div class="col-10 col-md-8">
+
+        <a class="btn btn-primary float-md-right" routerLink="/personajes">
+          Regresar al listado
+        </a>
+
+        <h2>Editar personaje</h2>
+
+        <p class="alert alert-danger" *ngIf="!personajeForm.valid">
+          Por favor complete todos los campos obligatorios
+        </p>
+
+        <form [formGroup]="personajeForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+
+                <i class="fa fa-check-circle check"
+                *ngIf="personajeForm.controls.nombre.valid"></i>
+
+                <i class="fa fa-exclamation-circle uncheck"
+                *ngIf="personajeForm.controls.nombre.invalid &&
+                       personajeForm.controls.nombre.touched"></i>
+
+                <input type="text"
+                      class="form-control"
+                      id="nombre"
+                      formControlName="nombre"
+                      [(ngModel)]="personajes.nombre">
+
+                <p class="alert alert-danger" *ngIf="erroresForm.nombre">
+                  {{ erroresForm.nombre}}
+                </p>
+
+            </div>
+
+            <div class="form-group">
+                <label for="elemento">Tipo de Elemento</label>
+
+                <i class="fa fa-check-circle check"
+                *ngIf="personajeForm.controls.elemento.valid"></i>
+
+                <i class="fa fa-exclamation-circle uncheck"
+                *ngIf="personajeForm.controls.elemento.invalid &&
+                       personajeForm.controls.elemento.touched"></i>
+
+                <select class="form-control"
+                        id="elemento"
+                        formControlName="elemento"
+                        [(ngModel)]="personajes.elemento">
+                        <option value="">Seleccione...</option>
+                        <option value="pyro"> Pyro</option>
+                        <option value="anemo"> Anemo</option>
+                        <option value="electro"> Electro</option>
+                        <option value="hydro"> Hydro</option>
+                        <option value="cryo"> Cryo</option>
+                        <option value="dendro"> Dendro</option>
+                        <option value="geo"> Geo</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+              <label for="estilo">Estilo Personaje</label>
+
+              <i class="fa fa-check-circle check"
+              *ngIf="personajeForm.controls.nombre.valid"></i>
+
+              <i class="fa fa-exclamation-circle uncheck"
+              *ngIf="personajeForm.controls.estilo.invalid &&
+                     personajeForm.controls.estilo.touched"></i>
+
+              <select class="form-control"
+                        id="estilo"
+                        formControlName="estilo"
+                        [(ngModel)]="personajes.estilo">
+                        <option value="">Seleccione...</option>
+                        <option value="main-dps"> Main-DPS</option>
+                        <option value="sub-dps"> Sub-DPS</option>
+                        <option value="support"> Support</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+              <label for="imagen">Ruta imagén</label>
+
+              <i class="fa fa-check-circle check"
+              *ngIf="personajeForm.controls.imagen.valid"></i>
+
+              <i class="fa fa-exclamation-circle uncheck"
+              *ngIf="personajeForm.controls.imagen.invalid &&
+                     personajeForm.controls.imagen.touched"></i>
+
+              <input type="text"
+                    class="form-control"
+                    id="imagen"
+                    formControlName="imagen"
+                    [(ngModel)]="personajes.imagen">
+
+          </div>
+
+          <button type="submit"
+                  class="btn btn-primary"
+                  [disabled]="!personajeForm.valid">
+                  Guardar Cambios
+          </button>
+
+          <a class="btn btn-danger" routerLink="/personajes">
+            Cancelar
+          </a>
+
+       </form>
+    </div>
+  </div>
+</div>

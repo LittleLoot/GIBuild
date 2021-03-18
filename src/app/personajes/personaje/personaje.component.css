@@ -1,0 +1,96 @@
+.pyro {
+  max-width: 90px;
+  height: 90px;
+  background-image: url('../../../assets/elementsCharacters/elementPyro.png');
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+.anemo {
+  max-width: 90px;
+  height: 90px;
+  background-image: url('../../../assets/elementsCharacters/elementAnemo.png');
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.cryo {
+  max-width: 90px;
+  height: 90px;
+  background-image: url('../../../assets/elementsCharacters/elementCryo.png');
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.geo {
+  max-width: 90px;
+  height: 90px;
+  background-image: url('../../../assets/elementsCharacters/elementGeo.png');
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.dendro {
+  max-width: 90px;
+  height: 90px;
+  background-image: url('../../../assets/elementsCharacters/elementDendro.png');
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.electro {
+  max-width: 90px;
+  height: 90px;
+  background-image: url('../../../assets/elementsCharacters/elementElectro.png');
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+.hydro {
+  max-width: 90px;
+  height: 90px;
+  background-image: url('../../../assets/elementsCharacters/elementHydro.png');
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.table td{
+  vertical-align:middle;
+  text-align: center;
+  border: 0px;
+  border-radius: 0px;
+  border-style: none;
+}
+
+.table{
+  border-style: none;
+}
+
+.imagenSize {
+  max-width: 90px;
+  height: 90px;
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
